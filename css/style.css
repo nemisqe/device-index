@@ -14,7 +14,7 @@ ul, li, p, div, form, h3 {
 	padding: 0;
 }
 
-a, li, .catalog {
+a, ul:not(.delivery-companies) li, .catalog {
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
@@ -23,7 +23,8 @@ a, li, .catalog {
 	}
 
 a,
-.catalog {
+.catalog,
+.delivery-companies {
 	font-weight: bold;
 }
 
@@ -65,7 +66,9 @@ p,
 .catalog,
 .info-header,
 .hit-product__page-link,
-.more-info {
+.more-info,
+.service-info ul li,
+.info-footer ul a {
 	text-transform: uppercase;
 }
 
@@ -105,10 +108,6 @@ input[placeholder*="Поиск"] {
 .footer-user-nav li a {
 	font-weight: normal;
 	line-height: 36px;
-}
-
-.delivery-companies {
-	font-weight: bold;
 }
 
 .main-header {
@@ -240,32 +239,126 @@ input[placeholder*="Поиск"] {
 	right: 0;
 }
 
-.product-categories ul:last-child {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 40px;
+.product-categories a {
+	display: inline-block;
+	width: 160px;
+	padding-top: 190px;
+	text-align: left;
 }
 
-.product-categories ul:last-child li {
-	width: 160px;
+.product-categories li {
+	margin-bottom: 180px;
 }
 
 .service-info {
 	min-height: 288px;
-	margin-top: 185px;
-	background-color: #e5e5e5;
+	position: relative;
+	margin-bottom: 105px;
+	background: #e5e5e5;
+}
+
+.service-info-container {
+	display: flex;
 }
 
 .service-info__services--container {
-	width: 285px;
-	height: 320px;
-	margin: 0;
-	padding: 0;
+	position: absolute;
+	top: -13px;
 }
 
 .service-info__description--container {
-	width: 440px;
-    height: 160px;
-	}
+	position: absolute;
+	width: 435px;
+	left: 540px;
+	top: -30px;
+}
 
+.service-info h3 {
+	padding-bottom: 40px;
+}
 
+.banners {
+	margin-bottom: 105px;
+}
+
+.features {
+	min-height: 565px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 85px;
+}
+
+.about-us__container {
+	width: 500px;
+}
+
+.contacts__container {
+	width: 565px;
+}
+
+.features h3 {
+	padding-bottom: 55px;
+	padding-top: 50px;
+}
+
+.features p:first-of-type {
+	padding-bottom: 40px;
+}
+
+.features p:nth-of-type(2) {
+	padding-bottom: 80px;
+}
+
+.delivery-companies {
+	padding-left: 15px;
+	padding-bottom: 80px;
+}
+
+.features img {
+	padding-bottom: 47px;
+}
+
+.logo-login__container,
+.address-info-tel__container,
+.social-logo__container {
+	padding-top: 65px;
+}
+
+.logo-login__container,
+.footer-user-nav ul,
+.address-info-tel__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-user-nav ul li {
+	padding-right: 60px;
+}
+
+.footer-user-nav ul li:last-child {
+	padding-right: 0;
+}
+
+.info-footer ul,
+.footer-social {
+	display: flex;
+}
+
+.social-logo__container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-social {
+	padding-right: 390px;
+}
+
+.info-footer li,
+.footer-social li {
+	padding-right: 35px;
+}
+
+.info-footer li:last-child,
+.footer-social li:last-child {
+	padding-right: 0;
+}
