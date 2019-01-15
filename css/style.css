@@ -154,7 +154,8 @@ input[placeholder*="Поиск"] {
 
 .catalog-popup {
 	display: flex;
-	background-color: lightblue/* #f7e296 */;
+	background-color: #f7e296;
+	position: relative;
 	z-index: 1000;
 }
 
