@@ -12,7 +12,7 @@
 		<div class="header-content-container">
 		<span class="header-logo"><a href="#">Device</a></span>
 		<div class="header-nav-container">
-		<form method="post" name="search">
+		<form method="post" name="search" class="header-search">
 				<input type="text" placeholder="Поиск по сайту">
 			</form>
 			<nav class="header-user-nav">
@@ -24,20 +24,37 @@
 		    </nav>
 		    </div>
 		    <div class="header-catalog-container">
-		<p class="catalog">Каталог товаров</p>
+		<div>
+			<p class="catalog">Каталог товаров</p>
+			<ul class="catalog-popup">
+				<li>
+					<a href="#">Виртуальная реальность</a>
+					<a href="#">Моноподы для селфи</a>
+					<a href="#">Экшн-камеры</a>
+				</li>
+				<li>
+					<a href="#">Фитнес-браслеты</a>
+					<a href="#">Умные часы</a>
+				</li>
+				<li>
+					<a href="#">Квадрокоптеры</a>
+				</li>
+			</ul>
+		</div>
 		<ul class="info-header">
 			<li class="info-item__delivery"><a href="#">Доставка</a></li>
 			<li class="info-item__warranty"><a href="#">Гарантия</a></li>
 			<li class="info-item__contacts"><a href="#">Контакты</a></li>
 		</ul>
-
+		<div class="line-decoration"></div>
 		</div>
 	</header>
 	</div>
 	<div class="container">
 		<img src="img/slider-1.png" width="384" height="486" alt="Селфи-моноподы" class="slider-one-pic">
 			<article class="slider">
-				<h3>Делай селфи, как Бен Стиллер!</h3>
+				<h3>Делай селфи, <br> как Бен Стиллер!</h3>
+				<span class="header-number">01</span>
 				<p class="hit-product__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм</p>
 				<a href="#" class="hit-product__page-link">Подробнее</a>
 				<input type="radio" class="slider-toggle">
