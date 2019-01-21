@@ -27,10 +27,22 @@
 	var searchInput = document.querySelector('#search-input');
 
 	searchInput.addEventListener('focus', function () {
-		submitButton.classList.remove('hidden');
+		activateBtn();
 	});
 
 	searchInput.addEventListener('focusout', function (evt) {
-		submitButton.classList.add('hidden');
+		if (evt.relatedTarget === submitButton) {
+			return;
+		}
+
+		deactivateBtn();
 	});
+
+	function activateBtn() {
+		submitButton.classList.remove('hidden');
+	}
+
+	function deactivateBtn() {
+		submitButton.classList.add('hidden');
+	}
 }());
