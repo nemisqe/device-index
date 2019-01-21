@@ -200,8 +200,6 @@ a:not(.product-categories-item):hover,
 	background: url(../img/logo-4-hover.png);
 }
 
-.product-categories-item:hover {}
-
 .header-logo:active,
 .footer-logo:active,
 a:active,
@@ -433,12 +431,12 @@ a:active,
 }
 
 .service-info__services--container {
-	position: absolute;
+	position: relative;
 	top: -13px;
 }
 
 .service-info__description--container {
-	position: absolute;
+	position: relative;
 	width: 435px;
 	left: 540px;
 	top: -30px;
