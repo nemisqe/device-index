@@ -9,6 +9,10 @@ body {
 	margin: 0 auto;
 }
 
+.hidden {
+	display: none;
+}
+
 ul, li, p, div, form, h3 {
 	margin: 0;
 	padding: 0;
@@ -100,7 +104,6 @@ input[placeholder*="Поиск"] {
 }
 
 input[value*="Найти"] {
-	display: none;
 	width: 80px;
 	height: 35px;
 	background-color: transparent;
@@ -112,7 +115,14 @@ input[value*="Найти"] {
 	padding-right: 10px;
 }
 
-.header-search input:nth-child(1):hover {
+input[value*="Найти"]:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+.header-search input:nth-child(1):hover,
+.header-user-nav li:hover,
+input[value*="Найти"]:active {
 	opacity: 0.6;
 }
 
@@ -165,10 +175,32 @@ input[value*="Найти"] {
 
 .header-logo:hover,
 .footer-logo:hover,
-a:hover,
+a:not(.product-categories-item):hover,
 .catalog:hover span {
 	opacity: 0.7;
 }
+
+.banners a:hover {
+	opacity: 1;
+}
+
+.banners a:first-child img:hover {
+	background: url(../img/logo-1-hover.png);
+}
+
+.banners a:nth-child(2) img:hover {
+	background: url(../img/logo-2-hover.png);
+}
+
+.banners a:nth-child(3) img:hover {
+	background: url(../img/logo-3-hover.png);
+}
+
+.banners a:last-child img:hover {
+	background: url(../img/logo-4-hover.png);
+}
+
+.product-categories-item:hover {}
 
 .header-logo:active,
 .footer-logo:active,
@@ -265,10 +297,6 @@ a:active,
 	background-position: -415px 10px;
 }
 
-.header-user-nav li:hover {
-	opacity: 0.6;
-}
-
 .header-nav-container form {
 	margin-top: 45px;
 }
@@ -314,7 +342,7 @@ a:active,
 	margin-bottom: 50px;
 }
 
-.hit-product__page-link {
+.button {
 	display: inline-block;
 	width: 220px;
 	height: 40px;
@@ -322,7 +350,6 @@ a:active,
 	text-align: center;
 	background-color: #f0c52e;
 	margin-bottom: 20px;
-	transition: background-size 2s ease-in;
 }
 
 .hit-product-info {
@@ -372,7 +399,7 @@ a:active,
 	margin-bottom: 35px;
 }
 
-.product-categories a:hover .product-categories__img-container {
+.product-categories-item:hover .product-categories__img-container {
 	background-color: #f0c52e;
 }
 
@@ -421,19 +448,6 @@ a:active,
 	padding-bottom: 40px;
 }
 
-.service-info__services--container li a {
-	display: inline-block;
-	width: 160px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	background-color: #f0c52e;
-}
-
-.service-info__services--container li {
-	padding-bottom: 20px;
-}
-
 .banners {
 	margin-bottom: 105px;
 }
@@ -446,6 +460,7 @@ a:active,
 }
 
 .about-us__container {
+	position: relative;
 	width: 500px;
 }
 
@@ -471,8 +486,15 @@ a:active,
 	padding-bottom: 80px;
 }
 
+.features__line-decoration {
+	position: absolute;
+	background-color: #000;
+	height: 10px;
+	width: 80px;
+}
+
 .features img {
-	padding-bottom: 47px;
+	margin-bottom: 54px;
 }
 
 .logo-login__container,
@@ -507,7 +529,31 @@ a:active,
 }
 
 .footer-social {
-	padding-right: 390px;
+	padding-right: 450px;
+}
+
+.footer-social a {
+	background: url(../img/social-icons-sprite.png) no-repeat;
+	display: block;
+	width: 32px;
+	height: 32px;
+	opacity: 0.5;
+}
+
+.footer-social li:nth-child(2) a {
+	background-position: -55px 0;
+}
+
+.footer-social li:last-child a {
+	background-position: -109px 0;
+}
+
+.footer-social li a:hover {
+	opacity: 1;
+}
+
+.footer-social li a:active {
+	opacity: 0.3;
 }
 
 .info-footer li,
@@ -518,4 +564,29 @@ a:active,
 .info-footer li:last-child,
 .footer-social li:last-child {
 	padding-right: 0;
+}
+
+.big-map {
+	position: absolute;
+    left: 70px;
+    top: 40px;
+}
+
+.small-map {
+	cursor: pointer;
+}
+
+.exit-button {
+	position: absolute;
+	display: block;
+	height: 55px;
+	width: 55px;
+	top: 25px;
+	left: 910px;
+	cursor: pointer;
+	background: url(../img/modal-close.png) no-repeat;
+}
+
+.exit-button:hover {
+	opacity: 0.8;
 }
