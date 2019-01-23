@@ -31,8 +31,9 @@
 	});
 
 	searchInput.addEventListener('focusout', function (evt) {
-		if (searchInput.value === "") {
-			submitButton.classList.add('hidden');
+		if (evt.relatedTarget === submitButton) {
+			return;
 		}
+		submitButton.classList.add('hidden');
 	});
 }());
