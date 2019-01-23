@@ -130,17 +130,31 @@
 				<div class="service-info__services--container">
 					<div class="line-decoration__service-info"></div>
 					<ul>
-						<li class="service-info__delivery"><a class="button" href="#">Доставка</a></li>
-						<li class="service-info__warranty"><a class="button" href="#">Гарантия</a></li>
-						<li class="service-info__credit"><a class="button" href="#">Кредит</a></li>
+						<li class="service-info__delivery"><button class="info-toggle info-toggle-1 button button-active">Доставка</button></li>
+						<li class="service-info__warranty"><button class="info-toggle info-toggle-2 button button">Гарантия</button></li>
+						<li class="service-info__credit"><button class="info-toggle info-toggle-3 button">Кредит</button></li>
 					</ul>
 				</div>
-				<div class="service-info__description--container">
+				<div class="service-info__description--container delivery-info _active">
 						<h3>Доставка</h3>
 						<p class="service-info__description">
 							Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
 						</p>
-					</div>
+				</div>
+				<div class="service-info__description--container warranty-info">
+						<h3>Гарантия</h3>
+						<p class="service-info__description">
+							Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+							Товар, не дом, конечно же.
+						</p>
+				</div>
+				<div class="service-info__description--container credit-info">
+						<h3>Кредит</h3>
+						<p class="service-info__description">
+							Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+							условия кредита. Выгодные для нашего банка, разумеется.
+						</p>
+				</div>
 				</div>
 			</div>
 		</section>
@@ -221,5 +235,6 @@
 			</div>
 	</footer>
 	<script src="js/show-big-map.js"></script>
+	<script src="js/services-switcher.js"></script>
 </body>
 </html>

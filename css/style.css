@@ -18,7 +18,7 @@ ul, li, p, div, form, h3 {
 	padding: 0;
 }
 
-a, ul:not(.delivery-companies) li, .catalog {
+a, ul:not(.delivery-companies) li, .catalog, button {
 	font-size: 18px;
 	line-height: 24px;
 	text-decoration: none;
@@ -35,7 +35,8 @@ a, ul:not(.delivery-companies) li, .catalog {
 
 a,
 .catalog,
-.delivery-companies {
+.delivery-companies,
+button {
 	font-weight: bold;
 }
 
@@ -83,7 +84,8 @@ p,
 .hit-product__page-link,
 .more-info,
 .service-info ul li,
-.info-footer ul a {
+.info-footer ul a,
+button {
 	text-transform: uppercase;
 }
 
@@ -346,9 +348,36 @@ a:active,
 	width: 220px;
 	height: 40px;
 	line-height: 40px;
-	text-align: center;
 	background-color: #f0c52e;
 	margin-bottom: 20px;
+	border: 0;
+}
+
+.service-info__description--container {
+	position: relative;
+	width: 435px;
+	left: 120px;
+	top: -30px;
+	display: none;
+}
+
+._active {
+	display: block;
+}
+
+.info-toggle {
+	padding-left: 63px;
+	text-align: left
+}
+
+.service-info__services--container li:last-child .info-toggle {
+	padding-left: 75px;
+}
+
+.button-active {
+	width: 340px;
+	background-color: #000;
+	color: #f7e184;
 }
 
 .hit-product-info {
@@ -434,13 +463,6 @@ a:active,
 .service-info__services--container {
 	position: relative;
 	top: -13px;
-}
-
-.service-info__description--container {
-	position: relative;
-	width: 435px;
-	left: 240px;
-	top: -30px;
 }
 
 .service-info h3 {
