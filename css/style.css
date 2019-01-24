@@ -144,7 +144,8 @@ input[value*="Найти"]:active,
 
 .main-footer {
 	min-height: 323px;
-	background-color: #464646;
+	background: #464646;
+	min-width: 1280px;
 }
 
 .footer-logo {
@@ -348,6 +349,7 @@ a:active,
 	width: 220px;
 	height: 40px;
 	line-height: 40px;
+	text-align: center;
 	background-color: #f0c52e;
 	margin-bottom: 20px;
 	border: 0;
@@ -359,6 +361,39 @@ a:active,
 	left: 120px;
 	top: -30px;
 	display: none;
+}
+
+.delivery-info::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 136px;
+	height: 164px;
+	top: 15px;
+	left: 530px;
+	background: url(../img/delivery-man.png) no-repeat;
+}
+
+.warranty-info::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 171px;
+	height: 194px;
+	top: 15px;
+	left: 530px;
+	background: url(../img/warranty.png) no-repeat;
+}
+
+.credit-info::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 156px;
+	height: 186px;
+	top: 10px;
+	left: 530px;
+	background: url(../img/credit.png) no-repeat;
 }
 
 ._active {
@@ -441,6 +476,7 @@ a:active,
 }
 
 .service-info {
+	min-width: 1280px;
 	min-height: 288px;
 	position: relative;
 	margin-bottom: 105px;
